@@ -1,0 +1,15 @@
+{
+  "user": "default",
+  "score": 110,
+  "streak": 1,
+  "history": [
+    {
+      "ts": 1764045290.7007837,
+      "level": 7,
+      "base": 110,
+      "multiplier": 1.0,
+      "used_hint": false,
+      "awarded": 110
+    }
+  ]
+}

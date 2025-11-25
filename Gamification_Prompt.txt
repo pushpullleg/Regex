@@ -1,0 +1,14 @@
+Plan: Gamified Regex Quest Notebook
+Create Regex_Quest.ipynb with level-based regex challenges, inline solutions, dynamic scoring (base + streak multiplier + scaled hint penalty), JSON persistence (regex_score.json), and clear early lookaround explanation (zero‑width assertions to test surrounding context without consuming characters). Progression: fundamentals → intermediate → advanced (lookarounds) → contact data “Boss” + final “Tournament” combining all skills.
+
+Steps
+Scaffold Regex_Quest.ipynb intro: rules, scoring model, streak logic, lookaround explanation section (positive/negative lookahead/behind examples).
+Implement 12 levels + Mini Boss (phones/emails normalization) + Boss (contact directory parse) + Tournament; each: challenge Markdown, attempt cell, solution Markdown, solution cell.
+Add dynamic scoring utilities: score, streak, level_base_points, streak multiplier (e.g., 1 + streak*0.1), scaled hint penalties (5% early → 25% late) persisted in regex_score.json.
+Provide helper cells: reset score, show status, record completion (append timestamp, level id, earned points), optional hint reveal deducting scaled penalty.
+Integrate lookarounds from Level 8 onward with targeted mini “Combo” tasks (e.g., extract phone numbers only when preceded by Contact: but not followed by TEMP).
+Conclude Tournament: parse mixed multiline contact block (names, emails, varied phone formats) into normalized dict list using groups, boundaries, lookarounds, substitutions; update final score and write summary entry.
+Further Considerations
+Streak reset: reset entirely on any failed attempt to encourage accuracy.
+Hint penalty: scaled by difficulty tier (Levels 1–4: -5%, 5–8: -15%, 9–12 & Boss/Tournament: -25%).
+Future scoreboard: extend regex_score.json to array of user objects {user, totals, history} enabling multi-user competition later.
